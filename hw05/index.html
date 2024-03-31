@@ -158,7 +158,7 @@
 </head>
 <body>
 <!-- https://alexlenail.me/NN-SVG/about.html -->
-<a href="https://tjhsieh.github.io/c/vis/vis2023f/syllabus/index.html" class="github-corner" aria-label="View source on Github">
+<a href="https://tjhsieh.github.io/c/ct/ct2024s/" class="github-corner" aria-label="View source on Github">
   <svg width="80" height="80" viewBox="0 0 250 250" style="fill:#f9eced; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
     <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
     <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="#f9eced" stroke="#6A4C9C" style="transform-origin: 130px 106px;" class="octo-arm"></path>
@@ -178,14 +178,17 @@
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      該次作業程式碼，請放在 https://github.com/<span style="color:red;">你的帳號</span>/ct2024s/hw<span style="color:red;">05</span>/src/ 檔案夾。
+      該次作業程式碼，請放在<br>
+      https://github.com/<span style="color:red;">你的帳號</span>/ct2024s/hw<span style="color:red;">05</span>/<span style="color:red;">Simple</span>。<br>
+      https://github.com/<span style="color:red;">你的帳號</span>/ct2024s/hw<span style="color:red;">05</span>/<span style="color:red;">Medium</span>。<br>
+      https://github.com/<span style="color:red;">你的帳號</span>/ct2024s/hw<span style="color:red;">05</span>/<span style="color:red;">Strong</span>。
     </div>
   </div>
 
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。
+      這次的作業令我學到如何使用再訓練的方式，來擴充自己的手寫字體，使用的設備是科研1223的電腦，我同時有使用學校的2080跟實驗室的1070ti，我發現還是教室的顯卡好用因為vram比較大，大概多花了一倍的時間，字體生成的結果是不怎麼樣，我甚至看不懂生成出來的字到底是什麼字，真是非常地微妙，這樣生出來的自體應該是沒辦法實際使用的，我想，不如就把全部的字手寫一遍吧。
     </div>
   </div>
 
@@ -201,19 +204,24 @@
         </tr>
         <tr>
           <td rowspan="7" id="myTotal"></td>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox1"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox1" checked></td>
           <td id='m1'>2</td>
-          <td>Simple baseline - 描述、描述、描述</td>
+          <td>Simple baseline - 產生訓練樣本 (4808字/2) (放入image_train，壓縮檔上傳)</td>
         </tr>
         <tr>
           <td><input type="checkbox" class="flipswitch" id="myCheckbox2" checked></td>
-          <td id='m2'>6</td>
-          <td>Medium baseline - 描述、描述、描述 </td>
+          <td id='m2'>2</td>
+          <td>Simple baseline - 產生驗證樣本 (4808字/2) (放入image_val，壓縮檔上傳)</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox3"></td>
-          <td id='m3'>2</td>
-          <td>Strong baseline - 描述、描述、描述 </td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox3" checked></td>
+          <td id='m3'>4</td>
+          <td>Medium baseline - 繳交字體的對比檔案 (以 experiment_學號_姓名.zip 命名) </td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox4" checked></td>
+          <td id='m4'>2</td>
+          <td>Strong baseline - 最後生成結果 (於infer_1資料夾內)</td>
         </tr>
       </table>
     </div>
@@ -221,14 +229,36 @@
 
   <!-- ------------------------------------------------>
   <div class="row hw12">
-    <div class="col-md-12 twenty">
-      <video id="video1" style="width:100%;max-width:100%;" controls="">
-        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-      </video>
+    <div class="col-md-12 twenty">    
+      <img src="./train.png" width="1200px" height="600px"/>  
+    </div>
+  </div>
+  
+   <div class="row hw12">
+    <div class="col-md-12 twenty">          
+      <img src="./val.png" width="1200px" height="600px"/>
+      
     </div>
   </div>
 
   <!-- ------------------------------------------------>
+
+  <div class="row hw12">
+    <div class="col-md-12 twenty">    
+      <h1>Medium Baseline</h1>
+      <a href="https://drive.google.com/file/d/13mOS3i1snRfBia_40DhQZyVnd9DrrgE7/view?usp=sharing" download="experiment_112598067">Download experiment_112598067_游晉維</a>
+      
+    </div>
+  </div>
+
+  <!-- ------------------------------------------------>
+  <div class="row hw12">
+    <div class="col-md-12 twenty">    
+      <h1>Strong Baseline</h1>
+      <a href="https://drive.google.com/file/d/1tRkUM_8NPCdsMqZ_X-cCIoqf07RtwS8J/view?usp=sharing" download="infer_112598067">Download infer_112598067_游晉維</a>
+      
+    </div>
+  </div>
 
   <!-- ------------------------------------------------>
 
@@ -265,6 +295,10 @@
 
     if (d3.select("#myCheckbox3").property("checked")){
       score += parseInt(d3.select('#m3').html());   
+    }
+
+    if (d3.select("#myCheckbox4").property("checked")){
+      score += parseInt(d3.select('#m4').html());   
     }
 
     d3.select("#myTotal").html(score);    
